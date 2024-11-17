@@ -9,91 +9,93 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = green_haven_store
 build_property.RootNamespace = green_haven_store
-build_property.ProjectDir = D:\projects\green_haven_store\green_haven_store\
+build_property.ProjectDir = D:\green-haven-store\green_haven_store\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\projects\green_haven_store\green_haven_store
+build_property.MSBuildProjectDirectory = D:\green-haven-store\green_haven_store
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminCategory/Add.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminCategory/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYXRlZ29yeVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminCategory/Edit.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminCategory/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYXRlZ29yeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminCategory/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminCategory/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5DYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminProduct/Add.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminProduct/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0XEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminProduct/Edit.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminProduct/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminProduct/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminProduct/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Qcm9kdWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/AdminUser/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/AdminUser/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5Vc2VyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Cart/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Home/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Home/Privacy.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Order/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Product/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Product/ProductSingleView.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Product/ProductSingleView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxQcm9kdWN0U2luZ2xlVmlldy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Shared/Error.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/User/Index.cshtml]
+[D:/green-haven-store/green_haven_store/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/User/SignUp.cshtml]
+[D:/green-haven-store/green_haven_store/Views/User/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/_ViewImports.cshtml]
+[D:/green-haven-store/green_haven_store/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/_ViewStart.cshtml]
+[D:/green-haven-store/green_haven_store/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/projects/green_haven_store/green_haven_store/Views/Shared/_Layout.cshtml]
+[D:/green-haven-store/green_haven_store/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-tt6vlqscq7

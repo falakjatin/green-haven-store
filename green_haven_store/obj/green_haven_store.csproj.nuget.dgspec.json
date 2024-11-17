@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\green_haven_store\\green_haven_store\\green_haven_store.csproj": {}
+    "D:\\green-haven-store\\green_haven_store\\green_haven_store.csproj": {}
   },
   "projects": {
-    "D:\\projects\\green_haven_store\\green_haven_store\\green_haven_store.csproj": {
+    "D:\\green-haven-store\\green_haven_store\\green_haven_store.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\green_haven_store\\green_haven_store\\green_haven_store.csproj",
+        "projectUniqueName": "D:\\green-haven-store\\green_haven_store\\green_haven_store.csproj",
         "projectName": "green_haven_store",
-        "projectPath": "D:\\projects\\green_haven_store\\green_haven_store\\green_haven_store.csproj",
+        "projectPath": "D:\\green-haven-store\\green_haven_store\\green_haven_store.csproj",
         "packagesPath": "C:\\Users\\phala\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\green_haven_store\\green_haven_store\\obj\\",
+        "outputPath": "D:\\green-haven-store\\green_haven_store\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\phala\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,7 +38,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -57,6 +67,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.21.0, )"
             }
           },
           "imports": [
@@ -78,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

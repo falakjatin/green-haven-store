@@ -1,0 +1,6 @@
+services:
+  green_haven_store:
+    image: ${DOCKER_REGISTRY-}greenhavenstore
+    build:
+      context: .
+      dockerfile: green_haven_store/Dockerfile
