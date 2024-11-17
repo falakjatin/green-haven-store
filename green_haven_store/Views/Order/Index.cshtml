@@ -1,0 +1,63 @@
+﻿@model IEnumerable<OrderViewModel>
+
+<div class="text-black text-center py-5 mb-4">
+    <h1 class="fw-bold mt-2">My Orders</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="table-responsive table-striped">
+        <table class="table align-middle">
+            <thead class="bg-light">
+                <tr class="text-center">
+                   
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                    <th>Tax</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var order in Model)
+                    {
+                        <tr class="text-center">
+                            
+                            <td class="align-middle">@order.Order_Quantity</td>
+                            <td class="align-middle text-success fw-bold">$@(String.Format("{0:F2}", order.Order_PayableAmount))</td>
+                            <td class="align-middle">$@(String.Format("{0:F2}", order.Order_Tax))</td>
+                            <td class="align-middle">@order.Order_Date</td>
+                            <td class="align-middle">
+                                <div class="d-flex justify-content-center">
+                                    @if (!@order.Order_IsPaymentDone)
+                                    {
+                                        <a class="btn btn-outline-success fw-bold me-2" asp-area="" asp-controller="Order" asp-action="MakePayment" asp-route-id="@order.Order_Id">Make Payment</a>
+                                    }
+                                    <a class="btn btn-outline-danger fw-bold" asp-area="" asp-controller="Order" asp-action="Delete" asp-route-id="@order.Order_Id">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr class="text-center">
+                        <td class="align-middle" colspan="6">No Orders available</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+                <li class="page-item active">
+                    <a class="page-link border-success text-success bg-white" href="#">1</a>
+                </li>
+            </ul>
+        </nav>
+    }
+</div>

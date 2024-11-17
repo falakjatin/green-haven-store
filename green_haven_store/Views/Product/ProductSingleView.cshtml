@@ -1,0 +1,37 @@
+﻿@model Product
+
+<div class="text-black text-center py-5 mb-4">
+    <h1 class="fw-bold mt-2">Product Details</h1>
+</div>
+<div class="container">
+
+        @if (ViewBag.Product is not null)
+        {
+            var product = ViewBag.Product;
+        double price = double.Parse(product.P_Price);
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="@product.P_PictureUri" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8 d-flex align-items-center justify-content-center">
+                        <div class="card-body">
+                            <h5 class="card-title">@product.P_Name</h5>
+                            <p class="card-text">@product.P_Description</p>
+                        <p class="card-text fw-bold">
+                            $@(String.Format("{0:F2}", price))
+                        </p>
+                            <p class="card-text">Date:<small class="text-body-secondary">@product.P_Date</small></p>
+                        <a class="btn btn-success w-100 mt-2" asp-area="" asp-controller="Cart" asp-action="AddToCart" asp-route-id="@product.P_Id">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <h3 class="fw-bold mt-2 text-center">There is no any product available</h3>
+        }
+
+</div>

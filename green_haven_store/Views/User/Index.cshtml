@@ -1,0 +1,49 @@
+﻿@model User
+
+@section Scripts
+{
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="text-black text-center py-4">
+    <h1 class="fw-bold">Login</h1>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+        @if (TempData["errorMsg"] is not null)
+        {
+            <div class="alert alert-danger text-center" role="alert">
+                @TempData["errorMsg"]
+            </div>
+        }
+        @if (TempData["message"] is not null)
+        {
+            <div class="alert alert-success text-center" role="alert">
+                @TempData["message"]
+            </div>
+        }
+
+        <div class="card shadow-sm border-0 rounded" style="background-color: #f8f9fa;">
+            <div class="card-body p-4">
+                <form asp-action="Login" method="post">
+                    <div class="mb-3">
+                        <label asp-for="U_Email" class="form-label fw-bold">Email Address</label>
+                        <input type="email" asp-for="U_Email" name="U_Email" class="form-control" placeholder="Enter your email">
+                        <span id="U_Email" asp-validation-for="U_Email" class="form-text text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="U_Password" class="form-label fw-bold">Password</label>
+                        <input type="password" asp-for="U_Password" name="U_Password" class="form-control" placeholder="Enter your password">
+                        <span id="U_Password" asp-validation-for="U_Password" class="form-text text-danger"></span>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-success fw-bold">Login</button>
+                        <button type="reset" class="btn btn-outline-success">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+﻿@model IEnumerable<CartViewModel>
+
+@{
+    double totalPrice = 0.0;
+    int[] ids = new int[0];
+    List<int> updatedIds = new List<int>(ids);
+
+    @foreach (var cart in Model)
+    {
+        double signlePrice = double.Parse(cart.P_Price);
+
+        if (signlePrice != 0.0)
+        {
+            double amount = signlePrice * (double)cart.Cart_Quantity;
+            totalPrice += amount;
+        }
+
+        updatedIds.Add(cart.Cart_Id);
+    }
+
+    string idsQueryString = string.Join(",", updatedIds);
+}
+
+<div class="text-black text-center py-5 mb-4">
+    <h1 class="fw-bold mt-2">Cart</h1>
+</div>
+
+<div class="container-fluid">
+    <div class="table-responsive table-striped">
+        <table class="table align-middle">
+            <thead class="bg-light">
+                <tr class="text-center">
+
+                    <th>Product Name</th>
+                    <th>Product Actual Price</th>
+                    <th>Product Payable Price</th>
+                    <th>Product Image</th>
+                    <th>Product Description</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model is not null && Model.Any())
+                {
+                    @foreach (var cart in Model)
+                    {
+                        double price = double.Parse(cart.P_Price);
+
+                        <tr class="text-center">
+
+                            <td class="align-middle">@cart.P_Name</td>
+                            <td class="align-middle text-success fw-bold">$@price</td>
+                            <td class="align-middle text-success fw-bold">$@String.Format("{0:F2}", price * cart.Cart_Quantity)</td>
+                            <td class="align-middle">
+                                <img src="@cart.P_PictureUri" class="img-fluid rounded" style="max-width: 80px; max-height: 80px;" alt="@cart.P_Description">
+                            </td>
+
+                            <td class="align-middle text-truncate" style="max-width: 150px;">@cart.P_Description</td>
+
+                            <td class="align-middle">
+                                <div class="input-group" style="width: 130px;">
+                                    <a class="btn btn-outline-danger fw-bold" asp-area="" asp-controller="Cart" asp-action="DecrimentQuantity" asp-route-id="@cart.Cart_Id" style="border-radius: 0.25rem 0 0 0.25rem;">-</a>
+                                    <input type="text" class="form-control text-center" value="@cart.Cart_Quantity" readonly style="border-left: none; border-right: none;">
+                                    <a class="btn btn-outline-success fw-bold" asp-area="" asp-controller="Cart" asp-action="IncrementQuantity" asp-route-id="@cart.Cart_Id" style="border-radius: 0 0.25rem 0.25rem 0;">+</a>
+                                </div>
+                            </td>
+
+                            <td class="align-middle">@cart.Cart_Date</td>
+                            <td class="align-middle">
+                                <a class="btn btn-outline-danger w-100" asp-area="" asp-controller="Cart" asp-action="Delete" asp-route-id="@cart.Cart_Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr class="text-center">
+                        <td class="align-middle" colspan="9">No items in your cart</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row justify-content-end">
+            <div class="col-12 col-lg-6 bg-white p-4 border rounded shadow-sm">
+                <h2 class="fw-bold text-success">Order Summary</h2>
+                <table class="table">
+                    <tbody>
+                        <tr class="text-center">
+                            <td class="text-start">Product Subtotal</td>
+                            <td class="text-end">$@String.Format("{0:F2}", totalPrice)</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-start">Order Discounts</td>
+                            <td class="text-end text-danger">- $50.00</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-start">Estimated Shipping</td>
+                            <td class="text-end text-success">Free</td>
+                        </tr>
+                        <tr class="text-center">
+                            <td class="text-start">Estimated Taxes</td>
+                            <td class="text-end">0.00</td>
+                        </tr>
+                        <tr class="text-center fw-bold">
+                            <td class="text-start">Estimated Total</td>
+                            <td class="text-end">$@String.Format("{0:F2}", totalPrice - 50)</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a class="btn btn-outline-success w-100 fw-bold" asp-area="" asp-controller="Order" asp-action="CheckOut" asp-route-id="@idsQueryString">Continue to Checkout</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>

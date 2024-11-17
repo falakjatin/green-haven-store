@@ -1,0 +1,62 @@
+﻿@model List<Product>
+
+<div class="text-center py-3">
+    <h1 class="fw-bold mt-2">Admin Product</h1>
+</div>
+
+@if (TempData["message"] is not null)
+{
+    <div class="alert alert-success text-center" role="alert">
+        @TempData["message"]
+    </div>
+}
+
+<div class="container-fluid">
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr class="text-center">
+                    <th>Id</th>
+                    <th>Picture</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.Products is not null)
+                {
+                    @foreach (var product in ViewBag.Products)
+                    {
+                        <tr class="text-center">
+                            <td class="align-middle">@product.P_Id</td>
+                            <td class="align-middle">
+                                <img src="@product.P_PictureUri" class="img-fluid rounded" style="max-width: 80px; max-height: 80px;" alt="@product.P_Description">
+                            </td>
+                            <td class="align-middle">@product.P_Name</td>
+                            <td class="align-middle text-success fw-bold">$@product.P_Price</td>
+                            <td class="align-middle text-truncate" style="max-width: 200px;">@product.P_Description</td>
+                            <td class="align-middle">@product.P_Date</td>
+                            <td class="align-middle">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <a class="btn btn-outline-success btn-sm fw-bold" asp-area="" asp-controller="AdminProduct" asp-action="Edit" asp-route-id="@product.P_Id">Edit</a>
+                                    <a class="btn btn-outline-danger btn-sm fw-bold" asp-area="" asp-controller="AdminProduct" asp-action="Delete" asp-route-id="@product.P_Id">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <nav aria-label="Page navigation" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item active">
+                    <a class="page-link text-success border-success bg-white" href="#">1</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>

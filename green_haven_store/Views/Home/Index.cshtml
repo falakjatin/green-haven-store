@@ -1,0 +1,86 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Hero Section -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <h1 class="display-4 text-success fw-bold">Welcome to Green Haven Store</h1>
+            <p class="lead">Your go-to destination for a diverse range of beautiful and sustainable plants. Explore our collection and bring a touch of nature into your home or office.</p>
+            @if (TempData["type"] is not null)
+            {
+                @if (TempData["type"].ToString() == "user")
+                {
+                    <a class="btn btn-success btn-lg" asp-area="" asp-controller="Product" asp-action="Index">Shop Plants</a>
+                }else if (TempData["type"].ToString() == "admin")
+                {
+                    <a class="btn btn-success btn-lg" asp-area="" asp-controller="AdminProduct" asp-action="Index">Products List</a>
+                }else
+                {
+                    <a class="btn btn-success btn-lg" asp-area="" asp-controller="Product" asp-action="Index">Shop Plants</a>
+                }
+            }else
+            {
+                <a class="btn btn-success btn-lg" asp-area="" asp-controller="Product" asp-action="Index">Shop Plants</a>
+            }
+        </div>
+        <div class="col-lg-6 d-none d-lg-block">
+            <img src="https://bloomscape.com/wp-content/uploads/2022/05/202107_Bloomscape_Lifestyle-Home-Office_0043-scaled.jpg?ver=790170" alt="Green Haven Store" class="img-fluid rounded">
+        </div>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr class="my-5">
+
+<!-- Featured Plants Section -->
+<div class="container">
+    <h2 class="text-center text-success fw-bold">Featured Plants</h2>
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Indoor Succulent Plant</h5>
+                    <p class="card-text">Brighten up your space with our low-maintenance indoor succulent plants, perfect for any room.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Potted Fern</h5>
+                    <p class="card-text">Our potted ferns are ideal for adding a touch of greenery to your home or office environment.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">Bonsai Tree</h5>
+                    <p class="card-text">Explore the art of bonsai with our carefully cultivated bonsai trees, perfect for both beginners and enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Divider -->
+<hr class="my-5">
+
+<!-- About Us Section -->
+<div class="container mt-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+            <img src="https://bloomscape.com/wp-content/uploads/2020/05/about-from-greenhouse.png?ver=205033" alt="About Us" class="img-fluid rounded mb-3">
+        </div>
+        <div class="col-lg-6">
+            <h2 class="text-success fw-bold">About Green Haven Store</h2>
+            <p>At Green Haven Store, we are passionate about promoting a green lifestyle by offering a diverse selection of plants. Whether you're looking to create a lush indoor garden or add a single statement plant to your space, we have something for every plant lover.</p>
+            <a href="#" class="btn btn-success">Learn More</a>
+        </div>
+    </div>
+</div>
+
+
+

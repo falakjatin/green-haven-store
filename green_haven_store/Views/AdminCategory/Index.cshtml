@@ -1,0 +1,58 @@
+﻿@model List<Category>
+
+<div class="text-center py-3">
+    <h1 class="fw-bold mt-2">Admin Category</h1>
+</div>
+@if (TempData["message"] is not null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["message"]
+    </div>
+}
+<div class="container-fluid">
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-bordered table-hover align-middle">
+            <thead class="table-light">
+                <tr class="text-center">
+                    <th>
+                        Id
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (ViewBag.Categories is not null)
+                {
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <tr class="text-center">
+                            <td>@category.Cat_Id</td>
+                            <td>@category.Cat_Name</td>
+                            <td>@category.Cat_Date</td>
+                            <td>
+                                <a class="btn btn-outline-success" asp-area="" asp-controller="AdminCategory" asp-action="Edit" asp-route-id="@category.Cat_Id">Edit</a>
+                                <a class="btn btn-outline-danger" asp-area="" asp-controller="AdminCategory" asp-action="Delete" asp-route-id="@category.Cat_Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+
+        <nav aria-label="Page navigation" class="d-flex justify-content-center">
+            <ul class="pagination">
+                <li class="page-item active">
+                    <a class="page-link text-success border-success bg-white" href="#">1</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
